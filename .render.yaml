@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: fashion-api
+    env: python
+    buildCommand: ""
+    startCommand: python api.py
+    envVars:
+      - key: PORT
+        value: 10000
