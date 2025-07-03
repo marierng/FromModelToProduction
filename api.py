@@ -6,7 +6,7 @@ from PIL import Image
 import io
 
 app = Flask(__name__)
-model = load_model('fashion_model.h5')
+model = load_model('fashion_model.keras')
 
 # Define categories if needed
 categories = ['T-shirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat',
