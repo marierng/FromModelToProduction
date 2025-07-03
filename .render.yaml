@@ -7,3 +7,8 @@ services:
     envVars:
       - key: PORT
         value: 10000
+
+
+build:
+  environment:
+    python: 3.10.13
