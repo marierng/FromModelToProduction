@@ -9,10 +9,6 @@ services:
         value: 10000
 
 build:
-  # Disable Poetry
   usePoetry: false
   environment:
     python: 3.10.10
-
-
-
