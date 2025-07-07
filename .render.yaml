@@ -4,9 +4,7 @@ services:
     env: python
     buildCommand: ""
     startCommand: gunicorn api:app
-    envVars:
-      - key: PORT
-        value: 10000
+    
 
 build:
   usePoetry: false
