@@ -17,8 +17,8 @@ from typing import List, Tuple
 import requests
 
 # ── Config ────────────────────────────────────────────────────────────
-API_URL       = "http://localhost:5000/predict"
-INCOMING_DIR  = Path("incoming_images")
+API_URL = os.getenv("API_URL", "http://localhost:5000/predict")
+INCOMING_DIR = Path("incoming_images")
 PROCESSED_DIR = Path("processed")
 
 # ── Logging ───────────────────────────────────────────────────────────
