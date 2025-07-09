@@ -2,8 +2,8 @@ name: Nightly batch predictions
 
 on:
   schedule:
-    - cron: '0 2 * * *'     # 02:00 UTC daily ≈ 04:00 Europe/Berlin now
-  workflow_dispatch:        # manual run button
+    - cron: '0 2 * * *'            # 02 :00 UTC daily
+  workflow_dispatch:               # manual run button
 
 jobs:
   batch:
@@ -14,7 +14,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: '3.10'
 
       - name: Install dependencies
         run: |
@@ -22,6 +22,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run batch prediction
+        env:
+          API_URL: https://fashion-api-osw7.onrender.com/predict   # 🔑
         run: python batch_predict.py
 
       - name: Upload nightly CSV

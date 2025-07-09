@@ -16,10 +16,18 @@ from typing import List, Tuple
 
 import requests
 
-# ── Config ────────────────────────────────────────────────────────────
-API_URL = os.getenv("API_URL", "http://localhost:5000/predict")
-INCOMING_DIR = Path("incoming_images")
+# ── Config ────────────────────────────────────────────
+API_URL       = os.getenv(                     # NEW
+    "API_URL",                                 # env-var if set
+    "http://localhost:5000/predict"            # fallback for local runs
+)
+INCOMING_DIR  = Path("incoming_images")
 PROCESSED_DIR = Path("processed")
+
+# ── Config ────────────────────────────────────────────────────────────
+#API_URL = os.getenv("API_URL", "http://localhost:5000/predict")
+#INCOMING_DIR = Path("incoming_images")
+#PROCESSED_DIR = Path("processed")
 
 # ── Logging ───────────────────────────────────────────────────────────
 os.makedirs("logs", exist_ok=True)
