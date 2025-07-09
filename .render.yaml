@@ -5,9 +5,10 @@ services:
     startCommand: gunicorn api:app --workers 2 --bind 0.0.0.0:$PORT
 
 build:
-  usePoetry: false
+  usePoetry: false           # plain pip, not Poetry
   environment:
-    python: 3.10.10
-  command: pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
-
-
+    python: 3.10.10          # matches the wheel set for TF-2.13
+  # Install deps without keeping wheel caches (saves RAM in the free builder)
+  command: |
+    pip install --upgrade pip
+    pip install --no-cache-dir -r requirements.txt

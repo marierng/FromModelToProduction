@@ -69,7 +69,9 @@ img.save("sample_image.png")
 print("sample_image.png saved!")
 
 
+
 model.save("fashion_model.h5")
+
 
 
 
