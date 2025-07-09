@@ -2,13 +2,12 @@ services:
   - type: web
     name: fashion-api
     env: python
-    buildCommand: ""
-    startCommand: python api.py
-    envVars:
-      - key: PORT
-        value: 10000
+    startCommand: gunicorn api:app --workers 2 --bind 0.0.0.0:$PORT
 
 build:
   usePoetry: false
   environment:
     python: 3.10.10
+  command: pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
+
+
