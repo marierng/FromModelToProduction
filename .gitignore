@@ -1,0 +1,5 @@
+﻿# runtime artefacts
+logs/
+processed/
+incoming_images/
+batch_predictions_*.csv

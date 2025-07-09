@@ -1,3 +1,0 @@
-timestamp,filename,model_version,top1_label,top1_score,top2_label,top2_score,top3_label,top3_score
-2025-07-03T20:13:21.418872,img1.png,fashion_model_v1,Ankle boot,100.0,Sandal,0.0,Sneaker,0.0
-2025-07-03T20:13:21.483338,test1.png,fashion_model_v1,Ankle boot,100.0,Sandal,0.0,Sneaker,0.0
