@@ -29,7 +29,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ── Model ─────────────────────────────────────────────────────────────
-MODEL_PATH = "fashion_model.h5"
+MODEL_PATH = "fashion_model.keras"
 CLASS_NAMES: List[str] = [
     "T-shirt/top", "Trouser", "Pullover", "Dress", "Coat",
     "Sandal", "Shirt", "Sneaker", "Bag", "Ankle boot"
